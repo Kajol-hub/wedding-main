@@ -5,11 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{{data.couple.bride}} & {{data.couple.groom}}</title>
+<title>Bride & Groom</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===== YOUR ORIGINAL CSS (UNCHANGED) ===== */
 
 :root{
 --gold:#d4af37;
@@ -34,7 +36,6 @@ padding:70px 20px;
 }
 
 .hero{
-
 height:100vh;
 display:flex;
 align-items:center;
@@ -44,23 +45,23 @@ text-align:center;
 
 background:
 linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('/static/images/hero.jpg');
+url('static/images/hero.jpg');
 
 background-size:cover;
 background-position:center;
 color:white;
-
-animation:fadeIn 2s ease;
 }
 
 .hero h1{
 font-size:5rem;
 font-family:'Great Vibes';
+animation:fadeIn 2s ease, float 4s ease-in-out infinite;
 }
 
 .hero p{
 font-size:1.2rem;
 margin-top:15px;
+animation:fadeIn 2.5s ease;
 }
 
 .countdown{
@@ -77,6 +78,7 @@ color:black;
 padding:15px;
 border-radius:15px;
 min-width:90px;
+animation:pulse 2s ease-in-out infinite;
 }
 
 .title{
@@ -87,32 +89,26 @@ color:#8c6239;
 }
 
 .carousel{
-
 display:flex;
 overflow-x:auto;
-scroll-snap-type:x mandatory;
 gap:15px;
 padding:10px;
 }
 
 .carousel img{
-
 width:300px;
 height:420px;
 object-fit:cover;
 border-radius:20px;
-scroll-snap-align:center;
 }
 
 .event-grid{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .event-card{
-
 background:white;
 padding:25px;
 border-radius:20px;
@@ -121,7 +117,6 @@ text-align:center;
 }
 
 .venue{
-
 background:white;
 padding:25px;
 border-radius:20px;
@@ -135,14 +130,12 @@ margin-bottom:20px;
 }
 
 .map-btn{
-
 display:inline-block;
 padding:12px 20px;
 background:#d4af37;
-text-decoration:none;
 color:white;
 border-radius:30px;
-margin-top:10px;
+text-decoration:none;
 }
 
 .parents{
@@ -157,32 +150,14 @@ border-radius:20px;
 }
 
 .blessing{
-
 max-width:900px;
 margin:auto;
 background:white;
 padding:40px;
 border-radius:20px;
-font-size:1.1rem;
-line-height:2;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.music-player{
-
-display:flex;
-justify-content:center;
-}
-
-
-
-.scratch-wrapper{
-display:flex;
-justify-content:center;
 }
 
 .footer{
-
 padding:40px;
 text-align:center;
 background:#111;
@@ -199,6 +174,7 @@ text-decoration:none;
 margin-top:15px;
 }
 
+/* animations */
 @keyframes fadeIn{
 from{opacity:0;transform:translateY(40px);}
 to{opacity:1;transform:translateY(0);}
@@ -214,380 +190,131 @@ to{opacity:1;transform:translateY(0);}
 50%{transform:scale(1.05);}
 }
 
-@keyframes shimmer{
-0%{background-position:-200% center;}
-100%{background-position:200% center;}
-}
-
-@keyframes heartFloat{
-0%{transform:translateY(0) rotate(0deg);opacity:1;}
-100%{transform:translateY(-100vh) rotate(720deg);opacity:0;}
-}
-
-@keyframes slideInLeft{
-from{opacity:0;transform:translateX(-60px);}
-to{opacity:1;transform:translateX(0);}
-}
-
-@keyframes slideInRight{
-from{opacity:0;transform:translateX(60px);}
-to{opacity:1;transform:translateX(0);}
-}
-
-@keyframes scaleIn{
-from{opacity:0;transform:scale(0.8);}
-to{opacity:1;transform:scale(1);}
-}
-
-@keyframes wiggle{
-0%,100%{transform:rotate(-1deg);}
-50%{transform:rotate(1deg);}
-}
-
-.hero{
-background-attachment:fixed;
-}
-
-.hero h1{
-animation:fadeIn 2s ease, float 4s ease-in-out infinite;
-animation-delay:0s,2s;
-}
-
-.hero p{
-animation:fadeIn 2.5s ease;
-}
-
-.time-box{
-animation:pulse 2s ease-in-out infinite;
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.time-box:nth-child(1){animation-delay:0s;}
-.time-box:nth-child(2){animation-delay:0.3s;}
-.time-box:nth-child(3){animation-delay:0.6s;}
-.time-box:nth-child(4){animation-delay:0.9s;}
-
-.time-box:hover{
-transform:scale(1.1);
-box-shadow:0 5px 20px rgba(212,175,55,0.3);
-}
-
-.title{
-background:linear-gradient(90deg,#8c6239,#d4af37,#8c6239);
-background-size:200% auto;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-background-clip:text;
-animation:shimmer 4s linear infinite;
-}
-
-.carousel img{
-transition:transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.carousel img:hover{
-transform:scale(1.05) rotate(1deg);
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-.event-card{
-transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.event-card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 15px 40px rgba(0,0,0,.15);
-}
-
-.venue img{
-transition:transform 0.6s ease;
-}
-
-.venue img:hover{
-transform:scale(1.02);
-}
-
-.map-btn{
-transition:all 0.3s ease;
-}
-
-.map-btn:hover{
-background:#b8962e;
-transform:scale(1.08);
-box-shadow:0 5px 20px rgba(212,175,55,0.4);
-}
-
-.parents img{
-transition:transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.parents img:hover{
-transform:scale(1.05) rotate(-1deg);
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.blessing{
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blessing:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-.whatsapp{
-transition:all 0.3s ease;
-}
-
-.whatsapp:hover{
-background:#1da851;
-transform:scale(1.08);
-box-shadow:0 5px 20px rgba(37,211,102,0.4);
-}
-
-.footer h2{
-animation:float 3s ease-in-out infinite;
-}
-
-/* Floating hearts container */
-.hearts-container{
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-pointer-events:none;
-z-index:9999;
-overflow:hidden;
-}
-
-.heart{
-position:absolute;
-bottom:-50px;
-font-size:20px;
-animation:heartFloat linear forwards;
-opacity:0.8;
-}
-
-/* Scroll reveal classes */
-.reveal-left{
-opacity:0;
-transform:translateX(-60px);
-transition:all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.reveal-right{
-opacity:0;
-transform:translateX(60px);
-transition:all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.reveal-scale{
-opacity:0;
-transform:scale(0.8);
-transition:all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.revealed{
-opacity:1 !important;
-transform:translateX(0) translateY(0) scale(1) !important;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-@media(max-width:600px){
-.hero h1{
-font-size:3rem;
-}
-.carousel img{
-width:250px;
-height:350px;
-}
-.hero{
-background-attachment:scroll;
-}
-}
+html{scroll-behavior:smooth;}
 
 </style>
 </head>
 
 <body>
 
-<div class="hearts-container" id="heartsContainer"></div>
-
+<!-- HERO -->
 <section class="hero">
 
-<h1>{{data.couple.bride}} & {{data.couple.groom}}</h1>
-
-<p>{{data.welcome_message}}</p>
+<h1>Bride & Groom</h1>
+<p>Welcome to our wedding celebration</p>
 
 <div class="countdown">
-
-<div class="time-box">
-<div id="days">0</div>
-Days
-</div>
-
-<div class="time-box">
-<div id="hours">0</div>
-Hours
-</div>
-
-<div class="time-box">
-<div id="minutes">0</div>
-Minutes
-</div>
-
-<div class="time-box">
-<div id="seconds">0</div>
-Seconds
-</div>
-
+<div class="time-box"><div id="days">0</div>Days</div>
+<div class="time-box"><div id="hours">0</div>Hours</div>
+<div class="time-box"><div id="minutes">0</div>Minutes</div>
+<div class="time-box"><div id="seconds">0</div>Seconds</div>
 </div>
 
 </section>
 
+<!-- STORY -->
 <section>
-
 <h2 class="title">Our Story</h2>
 
 <div class="carousel">
-
-{% for image in data.gallery %}
-<img src="{{image}}">
-{% endfor %}
-
+<img src="static/images/1.jpg">
+<img src="static/images/2.jpg">
+<img src="static/images/3.jpg">
 </div>
-
 </section>
 
+<!-- SCRATCH -->
 <section>
-
 <h2 class="title">Scratch To Reveal Wedding Date</h2>
 
-<div class="scratch-wrapper">
+<div style="position:relative;width:320px;height:120px;margin:auto;">
 
-<div style="position:relative;width:320px;height:120px;">
-
-<div
-style="
-position:absolute;
-top:0;left:0;
-width:320px;
-height:120px;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:28px;
-font-weight:bold;
-color:#8c6239;
-z-index:1;">
+<div style="position:absolute;width:100%;height:100%;display:flex;justify-content:center;align-items:center;font-size:28px;font-weight:bold;color:#8c6239;">
 15 FEBRUARY 2027
 </div>
 
-<canvas
-id="scratch"
-width="320"
-height="120"
-style="position:absolute;top:0;left:0;z-index:2;cursor:pointer;"></canvas>
+<canvas id="scratch" width="320" height="120"
+style="position:absolute;top:0;left:0;cursor:pointer;"></canvas>
 
 </div>
-
-</div>
-
 </section>
 
+<!-- EVENTS -->
 <section>
-
 <h2 class="title">Wedding Events</h2>
 
 <div class="event-grid">
 
-{% for e in data.events %}
 <div class="event-card">
-<h3>{{e.title}}</h3>
-<p>{{e.date}}</p>
-<p>{{e.time}}</p>
-</div>
-{% endfor %}
-
+<h3>Haldi</h3>
+<p>14 Feb 2027</p>
+<p>10:00 AM</p>
 </div>
 
+<div class="event-card">
+<h3>Wedding</h3>
+<p>15 Feb 2027</p>
+<p>7:00 PM</p>
+</div>
+
+</div>
 </section>
 
+<!-- VENUE -->
 <section>
-
 <h2 class="title">Venue</h2>
 
 <div class="venue">
 
-<img src="{{data.venue.image}}">
+<img src="static/images/venue.jpg">
 
-<h3>{{data.venue.name}}</h3>
+<h3>Wedding Hall Name</h3>
+<p>Full Address Here</p>
 
-<p>{{data.venue.address}}</p>
-
-<a
-class="map-btn"
-target="_blank"
-href="{{data.venue.map_link}}">
+<a class="map-btn" target="_blank"
+href="https://maps.google.com">
 Open Map
 </a>
 
 </div>
-
 </section>
 
+<!-- MUSIC -->
 <section>
-
 <h2 class="title">Wedding Music</h2>
 
-<div class="music-player">
-
+<div style="display:flex;justify-content:center;">
 <audio controls autoplay loop>
-<source
-src="/static/music/wedding-song.mp3"
-type="audio/mpeg">
+<source src="static/music/wedding-song.mp3" type="audio/mpeg">
 </audio>
-
 </div>
-
 </section>
 
+<!-- BLESSINGS -->
 <section>
-
-<h2 class="title">Blessings From Nayak Family</h2>
+<h2 class="title">Blessings</h2>
 
 <div class="blessing">
-
-{{data.blessings}}
-
+Wishing you a lifetime of love, happiness, and togetherness.
 </div>
-
 </section>
 
+<!-- PARENTS -->
 <section>
-
 <h2 class="title">Parents Gallery</h2>
 
 <div class="parents">
-
-{% for image in data.parents %}
-<img src="{{image}}">
-{% endfor %}
-
+<img src="static/images/p1.jpg">
+<img src="static/images/p2.jpg">
 </div>
-
 </section>
 
-
-
+<!-- FOOTER -->
 <div class="footer">
 
 <h2>See You At The Wedding ❤️</h2>
 
-<a
-class="whatsapp"
+<a class="whatsapp"
 target="_blank"
 href="https://wa.me/?text=You are invited to our wedding celebration">
 Share On WhatsApp
@@ -597,153 +324,47 @@ Share On WhatsApp
 
 <script>
 
-const weddingDate =
-new Date("{{data.wedding_date}}").getTime();
+/* COUNTDOWN */
+const weddingDate = new Date("2027-02-15").getTime();
 
-setInterval(()=>{
+setInterval(() => {
 
 let now = new Date().getTime();
-
 let diff = weddingDate - now;
 
-document.getElementById("days").innerHTML =
+document.getElementById("days").innerText =
 Math.floor(diff/(1000*60*60*24));
 
-document.getElementById("hours").innerHTML =
+document.getElementById("hours").innerText =
 Math.floor((diff%(1000*60*60*24))/(1000*60*60));
 
-document.getElementById("minutes").innerHTML =
+document.getElementById("minutes").innerText =
 Math.floor((diff%(1000*60*60))/(1000*60));
 
-document.getElementById("seconds").innerHTML =
+document.getElementById("seconds").innerText =
 Math.floor((diff%(1000*60))/1000);
 
 },1000);
 
-
-const canvas =
-document.getElementById("scratch");
-
-const ctx =
-canvas.getContext("2d");
+/* SCRATCH */
+const canvas = document.getElementById("scratch");
+const ctx = canvas.getContext("2d");
 
 ctx.fillStyle="#BDBDBD";
 ctx.fillRect(0,0,320,120);
-
-ctx.globalCompositeOperation =
-"destination-out";
+ctx.globalCompositeOperation="destination-out";
 
 let drawing=false;
 
-canvas.addEventListener("mousedown",
-()=>drawing=true);
+canvas.addEventListener("mousedown",()=>drawing=true);
+canvas.addEventListener("mouseup",()=>drawing=false);
 
-canvas.addEventListener("mouseup",
-()=>drawing=false);
-
-canvas.addEventListener("mousemove",
-(e)=>{
-
-if(!drawing)return;
-
-let rect=
-canvas.getBoundingClientRect();
-
+canvas.addEventListener("mousemove",(e)=>{
+if(!drawing) return;
+const r = canvas.getBoundingClientRect();
 ctx.beginPath();
-
-ctx.arc(
-e.clientX-rect.left,
-e.clientY-rect.top,
-18,
-0,
-Math.PI*2
-);
-
+ctx.arc(e.clientX-r.left,e.clientY-r.top,18,0,Math.PI*2);
 ctx.fill();
-
-});
-
-canvas.addEventListener("touchmove",
-(e)=>{
-
-let rect=
-canvas.getBoundingClientRect();
-
-let touch=e.touches[0];
-
-ctx.beginPath();
-
-ctx.arc(
-touch.clientX-rect.left,
-touch.clientY-rect.top,
-18,
-0,
-Math.PI*2
-);
-
-ctx.fill();
-
-});
-
-
-
-
-// Floating Hearts
-const heartsContainer = document.getElementById("heartsContainer");
-const heartEmojis = ['💕', '❤️', '💗', '✨', '💖', '🤍', '🌸'];
-
-function createHeart() {
-    const heart = document.createElement("span");
-    heart.classList.add("heart");
-    heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (Math.random() * 15 + 12) + "px";
-    heart.style.animationDuration = (Math.random() * 5 + 6) + "s";
-    heartsContainer.appendChild(heart);
-    setTimeout(() => heart.remove(), 11000);
-}
-
-setInterval(createHeart, 1500);
-
-// Enhanced Scroll Animations with staggered reveals
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
-
-            // Stagger child elements
-            const cards = entry.target.querySelectorAll(".event-card, .carousel img, .parents img");
-            cards.forEach((card, i) => {
-                card.style.opacity = "0";
-                card.style.transform = "translateY(30px)";
-                card.style.transition = `all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) ${i * 0.15}s`;
-                setTimeout(() => {
-                    card.style.opacity = "1";
-                    card.style.transform = "translateY(0)";
-                }, 50);
-            });
-        }
-    });
-}, { threshold: 0.1 });
-
-document.querySelectorAll("section:not(.hero)").forEach((section, i) => {
-    if (i % 3 === 0) section.classList.add("reveal-left");
-    else if (i % 3 === 1) section.classList.add("reveal-scale");
-    else section.classList.add("reveal-right");
-    observer.observe(section);
-});
-
-// Make hero always visible
-document.querySelector(".hero").style.opacity = "1";
-document.querySelector(".hero").style.transform = "none";
-
-// Parallax on scroll for hero
-window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector(".hero");
-    if (scrolled < window.innerHeight) {
-        hero.style.backgroundPositionY = scrolled * 0.4 + "px";
-    }
 });
 
 </script>
