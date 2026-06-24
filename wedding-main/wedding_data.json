@@ -1,0 +1,57 @@
+{
+  "couple": {
+    "bride": "Kajol Nayak",
+    "groom": "Smruti Ranjan Sahoo"
+  },
+
+  "wedding_date": "2027-01-31T18:30:00",
+
+  "venue": {
+    "name": "Empires Resort Puri",
+    "address": "Baliapanda Road, Puri, Odisha",
+    "map_link": "https://maps.google.com/?q=Empires+Resort+Puri",
+    "image": "/static/images/venue.jpg"
+  },
+
+  "welcome_message":
+  "Together with our families, we invite you to celebrate the beginning of our forever.",
+
+  "gallery": [
+    "/static/images/bride1.jpg",
+    "/static/images/bride2.jpg",
+    "/static/images/bride3.jpg"
+  ],
+
+  "parents": [
+    "/static/images/parents1.jpg",
+    "/static/images/parents2.jpg",
+    "/static/images/parents3.jpg",
+    "/static/images/parents4.jpg"
+  ],
+
+  "events": [
+    {
+      "title": "Haldi Ceremony",
+      "date": "29 Jan 2027",
+      "time": "10:00 AM"
+    },
+    {
+      "title": "Mehendi",
+      "date": "29 Jan 2027",
+      "time": "5:00 PM"
+    },
+    {
+      "title": "Wedding",
+      "date": "31 Jan 2027",
+      "time": "1:30 PM"
+    },
+    {
+      "title": "Reception",
+      "date": "3 Feb 2027",
+      "time": "7:00 PM"
+    }
+  ],
+
+  "blessings":
+  "With immense joy and heartfelt blessings, the Nayak Family welcomes you to share in this beautiful celebration of love, laughter and togetherness."
+}
